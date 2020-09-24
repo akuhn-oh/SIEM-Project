@@ -1,3 +1,11 @@
+# Event ID 400: Engine Lifecycle
+###### Version: 0
+
+## Description
+Logs the start and stop of PowerShell. Each time that PowerShell executes - either upon the execution of a single command, the start of a local session, or the start of a remoting session - this log records an Event ID (EID) 400 message: "Engine state is changed from None to Available." At the completion of the session, the log records an EID 403 event: "Engine state is changed from Available to Stopped".
+The message details for both EID 400 and EID 403 events include a HostName field. If executed locally, this field will be logged as HostName=ConsoleHost. If PowerShell remoting is in use, the accessed system will record these events with HostName=ServerRemoteHost.
+
+## Data Dictionary
 |Standard Name|Field Name|Type|Description|Sample Value|
 |---|---|---|---|---|
 |powershell_new_engine_state|NewEngineState|string||`Available`|
