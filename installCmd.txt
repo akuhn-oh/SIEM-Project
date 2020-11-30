@@ -1,0 +1,2 @@
+sysmon -u
+"\\wdprightfax01\rfadmin$\Config\sysmon\Sysmon.exe" -i "\\wdprightfax01\rfadmin$\Config\sysmon\sysmonconfig_1.2.xml" -accepteula
